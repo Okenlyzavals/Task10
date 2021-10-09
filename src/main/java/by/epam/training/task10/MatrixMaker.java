@@ -6,7 +6,6 @@ public class MatrixMaker {
 
     public static void main(String[] args) {
         int[][] matrix = makeMatrix(getOrderFromConsole());
-
         printMatrixToConsole(matrix);
     }
 
@@ -35,10 +34,10 @@ public class MatrixMaker {
         int result = scanner.nextInt();
 
         if (result % 2 != 0) {
-            System.out.println("The order must be even.");
+            System.out.println("Order must be even.");
             return getOrderFromConsole();
         } else if (result <= 0) {
-            System.out.println("The order must be greater than 0.");
+            System.out.println("Order must be greater than 0.");
             return getOrderFromConsole();
         } else return result;
 
