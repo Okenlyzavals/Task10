@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MatrixMaker {
 
     public static void main(String[] args) {
-        int[][] matrix = makeMatrix(getOrderFromInput());
+        int[][] matrix = makeMatrix(getOrderFromConsole());
 
         printMatrixToConsole(matrix);
     }
@@ -23,7 +23,7 @@ public class MatrixMaker {
         return matrix;
     }
 
-    public static int getOrderFromInput() {
+    public static int getOrderFromConsole() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the order of the matrix; it must be even.");
 
@@ -36,10 +36,10 @@ public class MatrixMaker {
 
         if (result % 2 != 0) {
             System.out.println("The order must be even.");
-            return getOrderFromInput();
+            return getOrderFromConsole();
         } else if (result <= 0) {
             System.out.println("The order must be greater than 0.");
-            return getOrderFromInput();
+            return getOrderFromConsole();
         } else return result;
 
     }
