@@ -37,9 +37,11 @@ public class MatrixMaker {
         if (result % 2 != 0) {
             System.out.println("The order must be even.");
             return getOrderFromInput();
-        } else {
-            return result;
-        }
+        } else if (result <= 0) {
+            System.out.println("The order must be greater than 0.");
+            return getOrderFromInput();
+        } else return result;
+
     }
 
     public static void printMatrixToConsole(int[][] matrix) {
