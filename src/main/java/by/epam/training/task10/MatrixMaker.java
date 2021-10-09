@@ -14,8 +14,11 @@ public class MatrixMaker {
 
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0, num = 0; col < matrix[row].length; col++, num++) {
-                if (row % 2 == 0) matrix[row][col] = 1 + num;
-                else matrix[row][col] = order - num;
+                if (row % 2 == 0) {
+                    matrix[row][col] = 1 + num;
+                } else {
+                    matrix[row][col] = order - num;
+                }
             }
         }
 
@@ -39,16 +42,21 @@ public class MatrixMaker {
         } else if (result <= 0) {
             System.out.println("Order must be greater than 0.");
             return getOrderFromConsole();
-        } else return result;
+        } else {
+            return result;
+        }
 
     }
 
     public static void printMatrixToConsole(int[][] matrix) {
+
         for (int[] row : matrix) {
-            for (int element : row)
+            for (int element : row) {
                 System.out.printf("|%10d", element);
+            }
             System.out.print("|\n");
         }
+
     }
 
 }
